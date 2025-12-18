@@ -2,320 +2,342 @@
   "countries": {
     "Latvia": {
       "code": "LV",
-      "users": 450000,
-      "description": "450K monthly active users (18% of population)",
+      "emoji": "🇱🇻",
+      "users_millions": 1.2,
       "age_groups": {
         "13-17": {
-          "percentage": 22,
+          "user_percentage": 16,
           "niches": [
-            {"name": "Dance & Challenges", "percentage": 30, "examples": "Trending dances, viral challenges"},
-            {"name": "Comedy & Entertainment", "percentage": 25, "examples": "Funny skits, memes, local humor"},
-            {"name": "Gaming", "percentage": 20, "examples": "Mobile games, Roblox, Fortnite clips"},
-            {"name": "Beauty & Fashion", "percentage": 12, "examples": "Makeup trends, outfit ideas"},
-            {"name": "Music", "percentage": 8, "examples": "Lip-sync, Latvian pop covers"},
-            {"name": "Educational", "percentage": 3, "examples": "School tips, language learning"},
-            {"name": "Sports", "percentage": 2, "examples": "Basketball, ice hockey highlights"}
+            {"name": "Dance & Challenges", "percentage": 24, "examples": "Trending TikTok dances, viral challenges"},
+            {"name": "Entertainment & Comedy", "percentage": 22, "examples": "Funny skits, humor, relatable content"},
+            {"name": "Gaming", "percentage": 18, "examples": "Mobile games, gaming clips, Minecraft"},
+            {"name": "Beauty & Fashion", "percentage": 18, "examples": "Makeup tutorials, style tips, fashion trends"},
+            {"name": "Music", "percentage": 12, "examples": "Music covers, lip-sync, original music"},
+            {"name": "Education", "percentage": 5, "examples": "Study tips, school hacks, learning content"},
+            {"name": "Sports & Fitness", "percentage": 5, "examples": "Sports clips, fitness challenges"}
           ]
         },
         "18-24": {
-          "percentage": 35,
+          "user_percentage": 38,
           "niches": [
-            {"name": "Entertainment & Comedy", "percentage": 28, "examples": "Comedy sketches, pranks"},
-            {"name": "Dance & Challenges", "percentage": 20, "examples": "Dance trends, duets"},
-            {"name": "Lifestyle & Vlogs", "percentage": 18, "examples": "Daily life, student content"},
-            {"name": "Beauty & Fashion", "percentage": 14, "examples": "Fashion hauls, makeup"},
-            {"name": "Gaming", "percentage": 10, "examples": "Gaming streams, esports"},
-            {"name": "Education", "percentage": 5, "examples": "University tips, career advice"},
-            {"name": "Food", "percentage": 3, "examples": "Latvian cuisine, recipes"},
-            {"name": "Music", "percentage": 2, "examples": "Original music, covers"}
+            {"name": "Entertainment & Comedy", "percentage": 26, "examples": "Comedy skits, prank videos, viral entertainment"},
+            {"name": "Dance & Challenges", "percentage": 18, "examples": "Trending dances, choreography, challenges"},
+            {"name": "Education & How-To", "percentage": 14, "examples": "Life hacks, tutorials, DIY projects"},
+            {"name": "Lifestyle & Vlogs", "percentage": 16, "examples": "Daily vlogs, lifestyle content, travel"},
+            {"name": "Beauty & Fashion", "percentage": 10, "examples": "Fashion hauls, makeup, style guides"},
+            {"name": "Music & Arts", "percentage": 8, "examples": "Original music, art creation, covers"},
+            {"name": "Food & Recipes", "percentage": 5, "examples": "Quick recipes, food reviews, cooking"},
+            {"name": "Gaming", "percentage": 3, "examples": "Gaming clips, esports, game reviews"}
           ]
         },
         "25-34": {
-          "percentage": 25,
+          "user_percentage": 28,
           "niches": [
-            {"name": "Lifestyle & Vlogs", "percentage": 24, "examples": "Family life, work-life balance"},
-            {"name": "Education & How-To", "percentage": 20, "examples": "Career tips, skill tutorials"},
-            {"name": "Food & Recipes", "percentage": 16, "examples": "Home cooking, Latvian recipes"},
-            {"name": "Fitness & Wellness", "percentage": 14, "examples": "Workouts, health tips"},
-            {"name": "Entertainment", "percentage": 12, "examples": "Comedy, storytelling"},
-            {"name": "Business & Career", "percentage": 8, "examples": "Entrepreneurship, remote work"},
-            {"name": "Travel", "percentage": 4, "examples": "Baltic travel, weekend trips"},
-            {"name": "Parenting", "percentage": 2, "examples": "Family content, parenting hacks"}
+            {"name": "Education & How-To", "percentage": 22, "examples": "Professional tips, skill building, tutorials"},
+            {"name": "Lifestyle & Vlogs", "percentage": 20, "examples": "Daily life, personal growth, wellness"},
+            {"name": "Food & Recipes", "percentage": 16, "examples": "Cooking tutorials, recipe videos, food trends"},
+            {"name": "Entertainment", "percentage": 14, "examples": "Comedy, entertaining clips, storytelling"},
+            {"name": "Fitness & Wellness", "percentage": 14, "examples": "Workout videos, health tips, meditation"},
+            {"name": "Business & Career", "percentage": 10, "examples": "Career advice, business tips, productivity"},
+            {"name": "Travel & Adventure", "percentage": 3, "examples": "Travel vlogs, adventure content"},
+            {"name": "Parenting", "percentage": 1, "examples": "Parenting hacks, family content"}
           ]
         },
         "35-44": {
-          "percentage": 12,
+          "user_percentage": 13,
           "niches": [
-            {"name": "Education & How-To", "percentage": 25, "examples": "Professional development, DIY"},
-            {"name": "Fitness & Wellness", "percentage": 20, "examples": "Home workouts, health"},
-            {"name": "Lifestyle & Vlogs", "percentage": 18, "examples": "Daily routines, family"},
-            {"name": "Food & Recipes", "percentage": 15, "examples": "Healthy cooking, meal prep"},
-            {"name": "Business & Career", "percentage": 12, "examples": "Career advice, finance"},
-            {"name": "Home & DIY", "percentage": 6, "examples": "Home improvement projects"},
-            {"name": "Travel", "percentage": 3, "examples": "Family vacations"},
-            {"name": "Entertainment", "percentage": 1, "examples": "Nostalgic content"}
+            {"name": "Education & How-To", "percentage": 24, "examples": "Life skills, professional development"},
+            {"name": "Fitness & Wellness", "percentage": 18, "examples": "Health tips, workout routines, wellness"},
+            {"name": "Business & Career", "percentage": 18, "examples": "Career advancement, entrepreneurship, finance"},
+            {"name": "Lifestyle & Vlogs", "percentage": 16, "examples": "Daily life, personal stories, lifestyle"},
+            {"name": "Food & Recipes", "percentage": 14, "examples": "Cooking tutorials, healthy recipes"},
+            {"name": "Home & DIY", "percentage": 7, "examples": "Home improvement, DIY projects"},
+            {"name": "Travel & Adventure", "percentage": 2, "examples": "Travel content, experiences"},
+            {"name": "Entertainment", "percentage": 1, "examples": "Entertainment and nostalgic content"}
           ]
         },
         "45+": {
-          "percentage": 6,
+          "user_percentage": 5,
           "niches": [
-            {"name": "Education & How-To", "percentage": 28, "examples": "Practical life skills"},
-            {"name": "Fitness & Health", "percentage": 22, "examples": "Senior fitness, health tips"},
-            {"name": "Home & DIY", "percentage": 18, "examples": "Gardening, home projects"},
-            {"name": "Food & Recipes", "percentage": 15, "examples": "Traditional Latvian cooking"},
-            {"name": "Business & Finance", "percentage": 10, "examples": "Retirement planning"},
-            {"name": "Travel", "percentage": 5, "examples": "Local sightseeing"},
-            {"name": "Nostalgic Content", "percentage": 2, "examples": "Retro videos, memories"}
+            {"name": "Education & How-To", "percentage": 26, "examples": "Practical knowledge, life tips"},
+            {"name": "Business & Finance", "percentage": 20, "examples": "Financial planning, investment, business"},
+            {"name": "Fitness & Health", "percentage": 18, "examples": "Health tips, fitness routines, wellness"},
+            {"name": "Home & DIY", "percentage": 16, "examples": "Home projects, gardening, improvement"},
+            {"name": "Travel & Adventure", "percentage": 12, "examples": "Travel experiences, exploring"},
+            {"name": "Food & Recipes", "percentage": 6, "examples": "Cooking, recipes, food culture"},
+            {"name": "Nostalgic & Entertainment", "percentage": 2, "examples": "Retro content, entertaining stories"}
           ]
         }
       }
     },
     "India": {
       "code": "IN",
-      "users": 85000000,
-      "description": "85M monthly active users (6% of population)",
+      "emoji": "🇮🇳",
+      "users_millions": 110,
       "age_groups": {
         "13-17": {
-          "percentage": 25,
+          "user_percentage": 28,
           "niches": [
-            {"name": "Dance & Challenges", "percentage": 35, "examples": "Bollywood dances, reel trends"},
-            {"name": "Comedy", "percentage": 25, "examples": "Village comedy, relatable humor"},
-            {"name": "Gaming", "percentage": 18, "examples": "BGMI, Free Fire, Ludo"},
-            {"name": "Beauty & Fashion", "percentage": 12, "examples": "Saree styling, makeup"},
-            {"name": "Music", "percentage": 8, "examples": "Bollywood songs, regional music"}
+            {"name": "Dance & Challenges", "percentage": 32, "examples": "Bollywood dances, Indian music videos"},
+            {"name": "Comedy & Entertainment", "percentage": 20, "examples": "Funny videos, Indian humor, memes"},
+            {"name": "Gaming", "percentage": 14, "examples": "Mobile gaming, PUBG, Fortnite clips"},
+            {"name": "Beauty & Fashion", "percentage": 16, "examples": "Fashion trends, makeup, styling tips"},
+            {"name": "Music", "percentage": 14, "examples": "Bollywood songs, covers, lip-sync"},
+            {"name": "Education", "percentage": 3, "examples": "Educational content, study tips"},
+            {"name": "Sports", "percentage": 1, "examples": "Cricket highlights, sports content"}
           ]
         },
         "18-24": {
-          "percentage": 40,
+          "user_percentage": 44,
           "niches": [
-            {"name": "Entertainment", "percentage": 30, "examples": "Comedy skits, drama"},
-            {"name": "Dance", "percentage": 22, "examples": "Reels, choreography"},
-            {"name": "Lifestyle", "percentage": 18, "examples": "College life, fashion"},
-            {"name": "Education", "percentage": 12, "examples": "Exam prep, career tips"},
-            {"name": "Food", "percentage": 8, "examples": "Street food, recipes"},
-            {"name": "Gaming", "percentage": 6, "examples": "Mobile gaming"}
+            {"name": "Entertainment & Comedy", "percentage": 26, "examples": "Comedy skits, funny reels, viral content"},
+            {"name": "Dance & Challenges", "percentage": 22, "examples": "Bollywood dances, trending challenges"},
+            {"name": "Education & How-To", "percentage": 14, "examples": "Educational tips, tutorials, hacks"},
+            {"name": "Lifestyle & Vlogs", "percentage": 14, "examples": "Daily vlogs, lifestyle, travel vlogs"},
+            {"name": "Beauty & Fashion", "percentage": 12, "examples": "Fashion hauls, makeup tutorials, styling"},
+            {"name": "Gaming", "percentage": 7, "examples": "Gaming clips, esports, game reviews"},
+            {"name": "Music & Arts", "percentage": 4, "examples": "Music covers, original music, art"},
+            {"name": "Food & Recipes", "percentage": 1, "examples": "Food content, cooking videos"}
           ]
         },
         "25-34": {
-          "percentage": 22,
+          "user_percentage": 20,
           "niches": [
-            {"name": "Lifestyle", "percentage": 25, "examples": "Family, relationships"},
-            {"name": "Education & Skills", "percentage": 20, "examples": "Job training, upskilling"},
-            {"name": "Food & Cooking", "percentage": 18, "examples": "Indian recipes, vegetarian"},
-            {"name": "Fitness", "percentage": 15, "examples": "Yoga, gym workouts"},
-            {"name": "Business", "percentage": 12, "examples": "Small business tips"},
-            {"name": "Entertainment", "percentage": 10, "examples": "Comedy, serials"}
+            {"name": "Education & How-To", "percentage": 20, "examples": "Professional tips, skill development"},
+            {"name": "Lifestyle & Vlogs", "percentage": 22, "examples": "Daily life content, personal stories"},
+            {"name": "Food & Recipes", "percentage": 18, "examples": "Indian recipes, cooking tutorials, food reviews"},
+            {"name": "Entertainment", "percentage": 14, "examples": "Comedy, entertainment, storytelling"},
+            {"name": "Fitness & Wellness", "percentage": 14, "examples": "Fitness routines, yoga, health tips"},
+            {"name": "Business & Career", "percentage": 8, "examples": "Career advice, business, entrepreneurship"},
+            {"name": "Travel & Adventure", "percentage": 4, "examples": "Travel vlogs, adventure content"}
           ]
         },
         "35-44": {
-          "percentage": 10,
+          "user_percentage": 6,
           "niches": [
-            {"name": "Education", "percentage": 28, "examples": "Professional skills"},
-            {"name": "Fitness & Health", "percentage": 22, "examples": "Yoga, diet plans"},
-            {"name": "Food", "percentage": 18, "examples": "Home cooking"},
-            {"name": "Lifestyle", "percentage": 15, "examples": "Family content"},
-            {"name": "Business", "percentage": 12, "examples": "Finance, investments"},
-            {"name": "Home", "percentage": 5, "examples": "Interior design"}
+            {"name": "Education & How-To", "percentage": 22, "examples": "Life skills, professional tips"},
+            {"name": "Fitness & Wellness", "percentage": 16, "examples": "Health, fitness, wellness routines"},
+            {"name": "Business & Career", "percentage": 22, "examples": "Career development, business tips"},
+            {"name": "Lifestyle & Vlogs", "percentage": 18, "examples": "Daily life, personal content"},
+            {"name": "Food & Recipes", "percentage": 16, "examples": "Traditional recipes, cooking content"},
+            {"name": "Home & DIY", "percentage": 4, "examples": "Home improvement, DIY projects"},
+            {"name": "Travel & Adventure", "percentage": 2, "examples": "Travel content"}
           ]
         },
         "45+": {
-          "percentage": 3,
+          "user_percentage": 2,
           "niches": [
-            {"name": "Health & Wellness", "percentage": 30, "examples": "Ayurveda, yoga"},
-            {"name": "Cooking", "percentage": 25, "examples": "Traditional recipes"},
-            {"name": "Religious Content", "percentage": 20, "examples": "Puja, festivals"},
-            {"name": "Family", "percentage": 15, "examples": "Grandparent stories"},
-            {"name": "Education", "percentage": 10, "examples": "Life wisdom"}
+            {"name": "Education & How-To", "percentage": 24, "examples": "Life tips, practical knowledge"},
+            {"name": "Business & Finance", "percentage": 26, "examples": "Financial planning, investment"},
+            {"name": "Fitness & Health", "percentage": 16, "examples": "Health tips, fitness, wellness"},
+            {"name": "Home & DIY", "percentage": 18, "examples": "Home projects, gardening, DIY"},
+            {"name": "Food & Recipes", "percentage": 10, "examples": "Traditional cooking, recipes"},
+            {"name": "Travel & Adventure", "percentage": 4, "examples": "Travel experiences"},
+            {"name": "Entertainment", "percentage": 2, "examples": "Entertainment content"}
           ]
         }
       }
     },
     "Germany": {
       "code": "DE",
-      "users": 28500000,
-      "description": "28.5M monthly active users (34% of population)",
+      "emoji": "🇩🇪",
+      "users_millions": 8.5,
       "age_groups": {
         "13-17": {
-          "percentage": 18,
+          "user_percentage": 18,
           "niches": [
-            {"name": "Dance & Challenges", "percentage": 28, "examples": "TikTok trends, dances"},
-            {"name": "Comedy", "percentage": 24, "examples": "Funny skits, memes"},
-            {"name": "Gaming", "percentage": 22, "examples": "FIFA, Minecraft"},
-            {"name": "Beauty", "percentage": 15, "examples": "Makeup, fashion"},
-            {"name": "Music", "percentage": 8, "examples": "German rap, pop"},
-            {"name": "Sports", "percentage": 3, "examples": "Football highlights"}
+            {"name": "Dance & Challenges", "percentage": 22, "examples": "Trending dances, TikTok challenges"},
+            {"name": "Comedy & Entertainment", "percentage": 20, "examples": "Funny skits, humor, relatable content"},
+            {"name": "Gaming", "percentage": 20, "examples": "Gaming clips, Fortnite, Minecraft"},
+            {"name": "Beauty & Fashion", "percentage": 16, "examples": "Makeup, fashion trends, styling"},
+            {"name": "Music", "percentage": 14, "examples": "Music covers, original music, lip-sync"},
+            {"name": "Education", "percentage": 5, "examples": "Study tips, educational content"},
+            {"name": "Sports", "percentage": 3, "examples": "Sports clips, fitness challenges"}
           ]
         },
         "18-24": {
-          "percentage": 38,
+          "user_percentage": 36,
           "niches": [
-            {"name": "Entertainment", "percentage": 26, "examples": "Comedy, satire"},
-            {"name": "Lifestyle", "percentage": 20, "examples": "Student life, fashion"},
-            {"name": "Dance", "percentage": 18, "examples": "Club dancing, trends"},
-            {"name": "Education", "percentage": 14, "examples": "Study tips, languages"},
-            {"name": "Fitness", "percentage": 10, "examples": "Gym, running"},
-            {"name": "Travel", "percentage": 6, "examples": "Backpacking, Europe"},
-            {"name": "Food", "percentage": 4, "examples": "Street food, vegan"},
-            {"name": "Music", "percentage": 2, "examples": "Live music clips"}
+            {"name": "Entertainment & Comedy", "percentage": 24, "examples": "Comedy skits, entertainment, viral videos"},
+            {"name": "Dance & Challenges", "percentage": 16, "examples": "Dancing, challenges, trends"},
+            {"name": "Education & How-To", "percentage": 16, "examples": "Life hacks, tutorials, DIY content"},
+            {"name": "Lifestyle & Vlogs", "percentage": 16, "examples": "Vlogs, lifestyle, travel content"},
+            {"name": "Beauty & Fashion", "percentage": 12, "examples": "Fashion hauls, makeup, styling"},
+            {"name": "Music & Arts", "percentage": 8, "examples": "Music, original content, art"},
+            {"name": "Gaming", "percentage": 5, "examples": "Gaming clips, esports, reviews"},
+            {"name": "Food & Recipes", "percentage": 3, "examples": "Recipes, food reviews, cooking"}
           ]
         },
         "25-34": {
-          "percentage": 28,
+          "user_percentage": 26,
           "niches": [
-            {"name": "Lifestyle", "percentage": 22, "examples": "Work-life balance"},
-            {"name": "Fitness", "percentage": 20, "examples": "Gym routines, yoga"},
-            {"name": "Education", "percentage": 18, "examples": "Career development"},
-            {"name": "Food", "percentage": 15, "examples": "Healthy cooking"},
-            {"name": "Entertainment", "percentage": 12, "examples": "Stand-up, satire"},
-            {"name": "Business", "percentage": 8, "examples": "Startups, career"},
-            {"name": "Travel", "percentage": 5, "examples": "Weekend trips"}
+            {"name": "Education & How-To", "percentage": 24, "examples": "Professional tips, skill building"},
+            {"name": "Lifestyle & Vlogs", "percentage": 20, "examples": "Daily life, personal growth"},
+            {"name": "Food & Recipes", "percentage": 16, "examples": "Cooking tutorials, recipes"},
+            {"name": "Entertainment", "percentage": 12, "examples": "Comedy, entertainment, stories"},
+            {"name": "Fitness & Wellness", "percentage": 14, "examples": "Fitness, health, wellness"},
+            {"name": "Business & Career", "percentage": 10, "examples": "Career advice, business tips"},
+            {"name": "Travel & Adventure", "percentage": 3, "examples": "Travel vlogs, adventures"},
+            {"name": "Home & DIY", "percentage": 1, "examples": "Home improvement"}
           ]
         },
         "35-44": {
-          "percentage": 12,
+          "user_percentage": 14,
           "niches": [
-            {"name": "Fitness & Health", "percentage": 24, "examples": "Family fitness"},
-            {"name": "Education", "percentage": 22, "examples": "Professional skills"},
-            {"name": "Lifestyle", "percentage": 18, "examples": "Family content"},
-            {"name": "Food", "percentage": 15, "examples": "Meal prep, diets"},
-            {"name": "Business", "percentage": 12, "examples": "Career advancement"},
-            {"name": "Home", "percentage": 6, "examples": "DIY, gardening"},
-            {"name": "Travel", "percentage": 3, "examples": "Family holidays"}
+            {"name": "Education & How-To", "percentage": 26, "examples": "Professional development, skills"},
+            {"name": "Fitness & Wellness", "percentage": 18, "examples": "Fitness, health routines"},
+            {"name": "Business & Career", "percentage": 18, "examples": "Career advancement, business"},
+            {"name": "Lifestyle & Vlogs", "percentage": 16, "examples": "Daily life, personal stories"},
+            {"name": "Food & Recipes", "percentage": 12, "examples": "Cooking, healthy recipes"},
+            {"name": "Home & DIY", "percentage": 8, "examples": "Home improvement, DIY"},
+            {"name": "Travel & Adventure", "percentage": 2, "examples": "Travel content"}
           ]
         },
         "45+": {
-          "percentage": 4,
+          "user_percentage": 6,
           "niches": [
-            {"name": "Health & Fitness", "percentage": 28, "examples": "Senior fitness"},
-            {"name": "Education", "percentage": 24, "examples": "Retirement planning"},
-            {"name": "Home & Garden", "percentage": 20, "examples": "DIY projects"},
-            {"name": "Food", "percentage": 15, "examples": "Traditional German cooking"},
-            {"name": "Travel", "percentage": 8, "examples": "Cultural trips"},
-            {"name": "Nostalgia", "percentage": 5, "examples": "Retro content"}
+            {"name": "Education & How-To", "percentage": 28, "examples": "Life tips, practical knowledge"},
+            {"name": "Business & Finance", "percentage": 22, "examples": "Financial planning, investment"},
+            {"name": "Fitness & Health", "percentage": 16, "examples": "Health, fitness, wellness"},
+            {"name": "Home & DIY", "percentage": 18, "examples": "Home projects, gardening"},
+            {"name": "Travel & Adventure", "percentage": 12, "examples": "Travel experiences"},
+            {"name": "Food & Recipes", "percentage": 4, "examples": "Cooking content"}
           ]
         }
       }
     },
     "Spain": {
       "code": "ES",
-      "users": 22500000,
-      "description": "22.5M monthly active users (47% of population)",
+      "emoji": "🇪🇸",
+      "users_millions": 6.8,
       "age_groups": {
         "13-17": {
-          "percentage": 20,
+          "user_percentage": 20,
           "niches": [
-            {"name": "Dance", "percentage": 32, "examples": "Flamenco trends, reggaeton"},
-            {"name": "Comedy", "percentage": 24, "examples": "Funny skits, memes"},
-            {"name": "Gaming", "percentage": 18, "examples": "Fortnite, FIFA"},
-            {"name": "Beauty", "percentage": 14, "examples": "Makeup tutorials"},
-            {"name": "Music", "percentage": 10, "examples": "Spanish pop, flamenco"},
-            {"name": "Sports", "percentage": 2, "examples": "Football highlights"}
+            {"name": "Dance & Challenges", "percentage": 28, "examples": "Spanish dances, flamenco trends, challenges"},
+            {"name": "Comedy & Entertainment", "percentage": 20, "examples": "Spanish humor, funny videos, memes"},
+            {"name": "Gaming", "percentage": 16, "examples": "Gaming content, esports, Fortnite"},
+            {"name": "Beauty & Fashion", "percentage": 16, "examples": "Fashion trends, makeup tutorials"},
+            {"name": "Music", "percentage": 14, "examples": "Spanish music, covers, reggaeton"},
+            {"name": "Education", "percentage": 4, "examples": "Educational content, study tips"},
+            {"name": "Sports", "percentage": 2, "examples": "Sports content, football"}
           ]
         },
         "18-24": {
-          "percentage": 36,
+          "user_percentage": 40,
           "niches": [
-            {"name": "Entertainment", "percentage": 28, "examples": "Comedy, challenges"},
-            {"name": "Dance", "percentage": 22, "examples": "Dance battles, trends"},
-            {"name": "Lifestyle", "percentage": 18, "examples": "University life"},
-            {"name": "Fashion", "percentage": 14, "examples": "Street style"},
-            {"name": "Food", "percentage": 8, "examples": "Tapas, street food"},
-            {"name": "Travel", "percentage": 6, "examples": "Beach content"},
-            {"name": "Music", "percentage": 4, "examples": "Live performances"}
+            {"name": "Entertainment & Comedy", "percentage": 26, "examples": "Comedy skits, viral Spanish content"},
+            {"name": "Dance & Challenges", "percentage": 20, "examples": "Spanish dances, reggaeton, challenges"},
+            {"name": "Education & How-To", "percentage": 14, "examples": "Life hacks, tutorials, DIY projects"},
+            {"name": "Lifestyle & Vlogs", "percentage": 16, "examples": "Daily vlogs, lifestyle, travel"},
+            {"name": "Beauty & Fashion", "percentage": 12, "examples": "Fashion, makeup, styling tips"},
+            {"name": "Music & Arts", "percentage": 6, "examples": "Music covers, original content"},
+            {"name": "Gaming", "percentage": 4, "examples": "Gaming clips, esports"},
+            {"name": "Food & Recipes", "percentage": 2, "examples": "Spanish recipes, food reviews"}
           ]
         },
         "25-34": {
-          "percentage": 26,
+          "user_percentage": 24,
           "niches": [
-            {"name": "Lifestyle", "percentage": 24, "examples": "Daily life, relationships"},
-            {"name": "Fitness", "percentage": 20, "examples": "Beach workouts, gym"},
-            {"name": "Food", "percentage": 18, "examples": "Spanish cuisine"},
-            {"name": "Education", "percentage": 14, "examples": "Language learning"},
-            {"name": "Entertainment", "percentage": 12, "examples": "Comedy sketches"},
-            {"name": "Business", "percentage": 8, "examples": "Entrepreneurship"},
-            {"name": "Travel", "percentage": 4, "examples": "Road trips"}
+            {"name": "Education & How-To", "percentage": 22, "examples": "Professional tips, skill building"},
+            {"name": "Lifestyle & Vlogs", "percentage": 22, "examples": "Daily life, personal growth, wellness"},
+            {"name": "Food & Recipes", "percentage": 18, "examples": "Spanish cooking, recipes, food reviews"},
+            {"name": "Entertainment", "percentage": 12, "examples": "Comedy, entertainment, storytelling"},
+            {"name": "Fitness & Wellness", "percentage": 14, "examples": "Fitness, health, wellness routines"},
+            {"name": "Business & Career", "percentage": 8, "examples": "Career advice, business tips"},
+            {"name": "Travel & Adventure", "percentage": 4, "examples": "Travel vlogs"}
           ]
         },
         "35-44": {
-          "percentage": 14,
+          "user_percentage": 12,
           "niches": [
-            {"name": "Fitness", "percentage": 26, "examples": "Family fitness"},
-            {"name": "Food", "percentage": 22, "examples": "Home cooking"},
-            {"name": "Lifestyle", "percentage": 18, "examples": "Family content"},
-            {"name": "Education", "percentage": 14, "examples": "Career development"},
-            {"name": "Business", "percentage": 10, "examples": "Small business"},
-            {"name": "Travel", "percentage": 6, "examples": "Family vacations"},
-            {"name": "Home", "percentage": 4, "examples": "Interior design"}
+            {"name": "Education & How-To", "percentage": 24, "examples": "Life skills, professional tips"},
+            {"name": "Fitness & Wellness", "percentage": 18, "examples": "Health, fitness, wellness"},
+            {"name": "Business & Career", "percentage": 18, "examples": "Career advancement, business"},
+            {"name": "Lifestyle & Vlogs", "percentage": 16, "examples": "Daily life, personal stories"},
+            {"name": "Food & Recipes", "percentage": 16, "examples": "Spanish recipes, cooking"},
+            {"name": "Home & DIY", "percentage": 6, "examples": "Home improvement, DIY"},
+            {"name": "Travel & Adventure", "percentage": 2, "examples": "Travel content"}
           ]
         },
         "45+": {
-          "percentage": 4,
+          "user_percentage": 4,
           "niches": [
-            {"name": "Health", "percentage": 30, "examples": "Mediterranean diet"},
-            {"name": "Cooking", "percentage": 25, "examples": "Traditional recipes"},
-            {"name": "Travel", "percentage": 20, "examples": "Cultural tourism"},
-            {"name": "Family", "percentage": 15, "examples": "Grandchildren content"},
-            {"name": "Home", "percentage": 10, "examples": "Gardening, crafts"}
+            {"name": "Education & How-To", "percentage": 26, "examples": "Life tips, practical knowledge"},
+            {"name": "Business & Finance", "percentage": 22, "examples": "Financial planning, investment"},
+            {"name": "Fitness & Health", "percentage": 18, "examples": "Health tips, fitness, wellness"},
+            {"name": "Home & DIY", "percentage": 16, "examples": "Home projects, gardening, DIY"},
+            {"name": "Food & Recipes", "percentage": 12, "examples": "Spanish cuisine, recipes"},
+            {"name": "Travel & Adventure", "percentage": 4, "examples": "Travel experiences"},
+            {"name": "Entertainment", "percentage": 2, "examples": "Entertainment content"}
           ]
         }
       }
     },
     "Turkey": {
       "code": "TR",
-      "users": 52000000,
-      "description": "52M monthly active users (61% of population)",
+      "emoji": "🇹🇷",
+      "users_millions": 42,
       "age_groups": {
         "13-17": {
-          "percentage": 24,
+          "user_percentage": 24,
           "niches": [
-            {"name": "Dance", "percentage": 34, "examples": "Turkish dances, trends"},
-            {"name": "Comedy", "percentage": 26, "examples": "Funny skits, memes"},
-            {"name": "Gaming", "percentage": 20, "examples": "Mobile Legends, PUBG"},
-            {"name": "Beauty", "percentage": 12, "examples": "Makeup, hijab fashion"},
-            {"name": "Music", "percentage": 8, "examples": "Turkish pop, rap"}
+            {"name": "Dance & Challenges", "percentage": 28, "examples": "Turkish music dances, viral challenges"},
+            {"name": "Comedy & Entertainment", "percentage": 22, "examples": "Funny skits, Turkish humor, entertainment"},
+            {"name": "Gaming", "percentage": 16, "examples": "Mobile gaming, esports, gaming clips"},
+            {"name": "Beauty & Fashion", "percentage": 16, "examples": "Fashion trends, makeup, styling"},
+            {"name": "Music", "percentage": 14, "examples": "Turkish music, covers, lip-sync"},
+            {"name": "Education", "percentage": 3, "examples": "Educational content, study tips"},
+            {"name": "Sports", "percentage": 1, "examples": "Football highlights, sports content"}
           ]
         },
         "18-24": {
-          "percentage": 38,
+          "user_percentage": 42,
           "niches": [
-            {"name": "Entertainment", "percentage": 30, "examples": "Comedy series"},
-            {"name": "Dance", "percentage": 24, "examples": "Wedding dances"},
-            {"name": "Lifestyle", "percentage": 18, "examples": "Student life"},
-            {"name": "Fashion", "percentage": 14, "examples": "Modest fashion"},
-            {"name": "Food", "percentage": 8, "examples": "Street food"},
-            {"name": "Music", "percentage": 6, "examples": "Turkish music"}
+            {"name": "Entertainment & Comedy", "percentage": 28, "examples": "Turkish comedy, viral entertainment"},
+            {"name": "Dance & Challenges", "percentage": 18, "examples": "Turkish dances, trending challenges"},
+            {"name": "Education & How-To", "percentage": 14, "examples": "Life hacks, tutorials, DIY projects"},
+            {"name": "Lifestyle & Vlogs", "percentage": 16, "examples": "Vlogs, daily life, travel content"},
+            {"name": "Beauty & Fashion", "percentage": 12, "examples": "Fashion hauls, makeup, styling"},
+            {"name": "Music & Arts", "percentage": 6, "examples": "Turkish music, original content, art"},
+            {"name": "Gaming", "percentage": 4, "examples": "Gaming clips, esports, reviews"},
+            {"name": "Food & Recipes", "percentage": 2, "examples": "Turkish food, recipes, cooking"}
           ]
         },
         "25-34": {
-          "percentage": 25,
+          "user_percentage": 22,
           "niches": [
-            {"name": "Lifestyle", "percentage": 26, "examples": "Family content"},
-            {"name": "Food", "percentage": 22, "examples": "Turkish cuisine"},
-            {"name": "Fitness", "percentage": 18, "examples": "Home workouts"},
-            {"name": "Education", "percentage": 14, "examples": "Career tips"},
-            {"name": "Entertainment", "percentage": 12, "examples": "TV series clips"},
-            {"name": "Business", "percentage": 8, "examples": "E-commerce tips"}
+            {"name": "Education & How-To", "percentage": 20, "examples": "Professional tips, skill development"},
+            {"name": "Lifestyle & Vlogs", "percentage": 22, "examples": "Daily life, personal content, wellness"},
+            {"name": "Food & Recipes", "percentage": 18, "examples": "Turkish cuisine, recipes, cooking"},
+            {"name": "Entertainment", "percentage": 14, "examples": "Comedy, entertainment, storytelling"},
+            {"name": "Fitness & Wellness", "percentage": 14, "examples": "Fitness routines, health, wellness"},
+            {"name": "Business & Career", "percentage": 8, "examples": "Career advice, business, entrepreneurship"},
+            {"name": "Travel & Adventure", "percentage": 4, "examples": "Travel vlogs, adventure content"}
           ]
         },
         "35-44": {
-          "percentage": 10,
+          "user_percentage": 8,
           "niches": [
-            {"name": "Food", "percentage": 28, "examples": "Home cooking"},
-            {"name": "Fitness", "percentage": 24, "examples": "Weight loss"},
-            {"name": "Lifestyle", "percentage": 20, "examples": "Family life"},
-            {"name": "Education", "percentage": 14, "examples": "Financial literacy"},
-            {"name": "Business", "percentage": 10, "examples": "Small business"},
-            {"name": "Health", "percentage": 4, "examples": "Traditional medicine"}
+            {"name": "Education & How-To", "percentage": 22, "examples": "Life skills, professional tips"},
+            {"name": "Fitness & Wellness", "percentage": 16, "examples": "Health, fitness, wellness routines"},
+            {"name": "Business & Career", "percentage": 22, "examples": "Career advancement, business"},
+            {"name": "Lifestyle & Vlogs", "percentage": 18, "examples": "Daily life, personal stories"},
+            {"name": "Food & Recipes", "percentage": 16, "examples": "Turkish recipes, cooking content"},
+            {"name": "Home & DIY", "percentage": 4, "examples": "Home improvement, DIY projects"},
+            {"name": "Travel & Adventure", "percentage": 2, "examples": "Travel content"}
           ]
         },
         "45+": {
-          "percentage": 3,
+          "user_percentage": 4,
           "niches": [
-            {"name": "Cooking", "percentage": 32, "examples": "Traditional recipes"},
-            {"name": "Health", "percentage": 28, "examples": "Natural remedies"},
-            {"name": "Family", "percentage": 22, "examples": "Grandchildren"},
-            {"name": "Religious", "percentage": 12, "examples": "Islamic content"},
-            {"name": "Nostalgia", "percentage": 6, "examples": "Old songs, memories"}
+            {"name": "Education & How-To", "percentage": 24, "examples": "Life tips, practical knowledge"},
+            {"name": "Business & Finance", "percentage": 24, "examples": "Financial planning, investment"},
+            {"name": "Fitness & Health", "percentage": 18, "examples": "Health tips, fitness, wellness"},
+            {"name": "Home & DIY", "percentage": 16, "examples": "Home projects, gardening, DIY"},
+            {"name": "Food & Recipes", "percentage": 12, "examples": "Turkish cuisine, traditional recipes"},
+            {"name": "Travel & Adventure", "percentage": 4, "examples": "Travel experiences"},
+            {"name": "Entertainment", "percentage": 2, "examples": "Entertainment content"}
           ]
         }
       }
