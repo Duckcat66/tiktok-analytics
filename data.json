@@ -3,7 +3,7 @@
     "Latvia": {
       "code": "LV",
       "emoji": "🇱🇻",
-      "users_millions": 1.2,
+      "users_millions": 0.45,
       "age_groups": {
         "13-17": {
           "user_percentage": 16,
@@ -73,7 +73,7 @@
     "India": {
       "code": "IN",
       "emoji": "🇮🇳",
-      "users_millions": 110,
+      "users_millions": 85,
       "age_groups": {
         "13-17": {
           "user_percentage": 28,
@@ -141,7 +141,7 @@
     "Germany": {
       "code": "DE",
       "emoji": "🇩🇪",
-      "users_millions": 8.5,
+      "users_millions": 28.5,
       "age_groups": {
         "13-17": {
           "user_percentage": 18,
@@ -209,7 +209,7 @@
     "Spain": {
       "code": "ES",
       "emoji": "🇪🇸",
-      "users_millions": 6.8,
+      "users_millions": 22.8,
       "age_groups": {
         "13-17": {
           "user_percentage": 20,
@@ -277,7 +277,7 @@
     "Turkey": {
       "code": "TR",
       "emoji": "🇹🇷",
-      "users_millions": 42,
+      "users_millions": 52,
       "age_groups": {
         "13-17": {
           "user_percentage": 24,
