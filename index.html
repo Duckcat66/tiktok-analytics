@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Analytics Pro - AI Powered Platform</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        :root {
+            --color-white: rgba(255, 255, 255, 1);
+            --color-black: rgba(0, 0, 0, 1);
+            --color-cream-50: rgba(252, 252, 249, 1);
+            --color-cream-100: rgba(255, 255, 253, 1);
+            --color-gray-200: rgba(245, 245, 245, 1);
+            --color-gray-300: rgba(167, 169, 169, 1);
+            --color-teal-500: rgba(33, 128, 141, 1);
+            --color-teal-600: rgba(29, 116, 128, 1);
+            --color-teal-700: rgba(26, 104, 115, 1);
+            --color-teal-300: rgba(50, 184, 198, 1);
+            --color-red-400: rgba(255, 84, 89, 1);
+            --color-orange-400: rgba(230, 129, 97, 1);
+            --color-slate-900: rgba(19, 52, 59, 1);
+            --color-slate-500: rgba(98, 108, 113, 1);
+            
+            --focus-ring: 0 0 0 3px rgba(33, 128, 141, 0.4);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin: 0;
+        }
+        
+        .main-card {
+            background: var(--color-cream-100);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            margin-bottom: 30px;
+        }
+        
+        .input-section {
+            display: flex;
+            gap: 20px;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        label {
+            font-weight: 600;
+            color: var(--color-slate-900);
+            font-size: 0.95em;
+        }
+        
+        select, input {
+            padding: 12px 16px;
+            border: 2px solid rgba(33, 128, 141, 0.2);
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.2s;
+            font-family: inherit;
+            background: var(--color-white);
+            color: var(--color-slate-900);
+        }
+        
+        select:focus, input:focus {
+            outline: none;
+            border-color: var(--color-teal-500);
+            box-shadow: var(--focus-ring);
+        }
+        
+        button {
+            padding: 12px 32px;
+            background: var(--color-teal-500);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        button:hover {
+            background: var(--color-teal-600);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        button:active {
+            background: var(--color-teal-700);
+            transform: translateY(0);
+        }
+        
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .results-section {
+            display: none;
+        }
+        
+        .results-section.active {
+            display: block;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, var(--color-teal-500), var(--color-teal-600));
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .stat-card h3 {
+            margin: 0 0 8px 0;
+            font-size: 0.9em;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        
+        .stat-card .value {
+            font-size: 2em;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .stat-card.accent1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .stat-card.accent2 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .stat-card.accent3 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .chart-container {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            height: 400px;
+        }
+        
+        .chart-container h3 {
+            margin: 0 0 20px 0;
+            color: var(--color-slate-900);
+            font-size: 1.2em;
+        }
+        
+        .niches-table {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+            overflow-x: auto;
+            margin-bottom: 30px;
+        }
+        
+        .niches-table h3 {
+            margin: 0 0 20px 0;
+            color: var(--color-slate-900);
+            font-size: 1.2em;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th {
+            background: rgba(33, 128, 141, 0.1);
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--color-slate-900);
+            border-bottom: 2px solid rgba(33, 128, 141, 0.2);
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(33, 128, 141, 0.1);
+            color: var(--color-slate-500);
+        }
+        
+        tr:hover {
+            background: rgba(33, 128, 141, 0.05);
+        }
+        
+        .progress-bar {
+            background: rgba(33, 128, 141, 0.1);
+            border-radius: 4px;
+            height: 8px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+        
+        .progress-fill {
+            background: var(--color-teal-500);
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        
+        .niche-name {
+            font-weight: 600;
+            color: var(--color-slate-900);
+        }
+        
+        .percentage {
+            font-weight: 600;
+            color: var(--color-teal-600);
+        }
+        
+        .examples {
+            font-size: 0.85em;
+            color: var(--color-slate-500);
+            max-width: 400px;
+        }
+        
+        .recommendations-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+        }
+        
+        .recommendations-box h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .recommendations-box .rec-section {
+            margin-bottom: 15px;
+        }
+        
+        .recommendations-box .rec-section h4 {
+            margin: 0 0 8px 0;
+            font-size: 1em;
+            font-weight: 600;
+            opacity: 0.95;
+        }
+        
+        .recommendations-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .recommendations-box li {
+            margin: 5px 0;
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+        
+        .info-banner {
+            background: rgba(50, 184, 198, 0.1);
+            border-left: 4px solid var(--color-teal-500);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            color: var(--color-slate-900);
+            font-size: 0.95em;
+        }
+        
+        .info-banner strong {
+            color: var(--color-teal-600);
+        }
+        
+        .demo-banner {
+            background: rgba(102, 126, 234, 0.1);
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            color: var(--color-slate-900);
+            font-size: 0.95em;
+        }
+        
+        .demo-banner strong {
+            color: #667eea;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .input-section {
+                flex-direction: column;
+            }
+            
+            .input-group {
+                min-width: 100%;
+            }
+            
+            .main-card {
+                padding: 20px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .chart-container {
+                height: 300px;
+            }
+            
+            .recommendations-box {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 TikTok Analytics Pro</h1>
+            <p>Discover content trends across demographics with AI-powered recommendations</p>
+        </header>
+        
+        <div class="main-card">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="country">Select Country:</label>
+                    <select id="country">
+                        <option value="">-- Choose a country --</option>
+                        <option value="Latvia">🇱🇻 Latvia</option>
+                        <option value="India">🇮🇳 India</option>
+                        <option value="Germany">🇩🇪 Germany</option>
+                        <option value="Spain">🇪🇸 Spain</option>
+                        <option value="Turkey">🇹🇷 Turkey</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="ageGroup">Select Age Group:</label>
+                    <select id="ageGroup">
+                        <option value="">-- Choose an age group --</option>
+                        <option value="13-17">🎮 13-17 years (Gen Z)</option>
+                        <option value="18-24">💃 18-24 years (Young Adults)</option>
+                        <option value="25-34">👨‍💼 25-34 years (Millennials)</option>
+                        <option value="35-44">👴 35-44 years (Gen X)</option>
+                        <option value="45+">🧓 45+ years (Mature)</option>
+                    </select>
+                </div>
+                
+                <button onclick="analyzeData()" style="height: 44px;">Analyze</button>
+            </div>
+            
+            <div class="results-section" id="resultsSection">
+                <div class="demo-banner">
+                    <strong>📊 Data Source:</strong> Based on TikTok 2025 demographic statistics and public research data
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Platform Audience Share</h3>
+                        <p class="value" id="audienceShare">--</p>
+                    </div>
+                    <div class="stat-card accent1">
+                        <h3>Top Niche Category</h3>
+                        <p class="value" id="topNiche" style="font-size: 1.3em;">--</p>
+                    </div>
+                    <div class="stat-card accent2">
+                        <h3>Avg. Engagement Level</h3>
+                        <p class="value" id="engagement">--</p>
+                    </div>
+                    <div class="stat-card accent3">
+                        <h3>Total Niches</h3>
+                        <p class="value" id="totalNiches">--</p>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <h3>Content Niche Distribution</h3>
+                    <canvas id="nicheChart"></canvas>
+                </div>
+                
+                <div class="niches-table">
+                    <h3>Detailed Niche Breakdown</h3>
+                    <table id="nichesTable">
+                        <thead>
+                            <tr>
+                                <th>Niche Category</th>
+                                <th>Audience %</th>
+                                <th>Popular Examples</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="recommendations-box" id="recommendationsBox" style="display: none;">
+                    <h3>💡 AI Recommendations for Content Creators</h3>
+                    <div id="recommendationContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Data loading function
+        let tiktokData = null;
+        
+        // Load data from external JSON file
+        async function loadData() {
+            try {
+                const response = await fetch('data.json');
+                if (!response.ok) throw new Error('Failed to load data');
+                const data = await response.json();
+                tiktokData = data.countries;
+                console.log('Data loaded successfully');
+            } catch (error) {
+                console.error('Error loading data:', error);
+                alert('Error loading data. Please ensure data.json is in the same folder.');
+            }
+        }
+        
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', loadData);
+        
+        let chartInstance = null;
+        
+        // Main analysis function
+        function analyzeData() {
+            const country = document.getElementById('country').value;
+            const ageGroup = document.getElementById('ageGroup').value;
+            
+            if (!country || !ageGroup) {
+                alert('Please select both country and age group!');
+                return;
+            }
+            
+            if (!tiktokData || !tiktokData[country]) {
+                alert('Country data not found!');
+                return;
+            }
+            
+            const countryData = tiktokData[country];
+            const ageData = countryData.age_groups[ageGroup];
+            
+            if (!ageData) {
+                alert('Age group data not found!');
+                return;
+            }
+            
+            // Update stats
+            document.getElementById('audienceShare').textContent = countryData.users_millions + 'M';
+            document.getElementById('topNiche').textContent = ageData.niches[0].name.split(' ')[0];
+            document.getElementById('engagement').textContent = (ageData.user_percentage * 0.3).toFixed(1) + '%';
+            document.getElementById('totalNiches').textContent = ageData.niches.length;
+            
+            // Update table
+            const tableBody = document.getElementById('tableBody');
+            tableBody.innerHTML = '';
+            
+            ageData.niches.forEach((niche) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="niche-name">${niche.name}</td>
+                    <td>
+                        <div>
+                            <span class="percentage">${niche.percentage}%</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: ${niche.percentage}%"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="examples">${niche.examples}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+            
+            // Update chart
+            updateChart(ageData);
+            
+            // Generate recommendations
+            generateAndDisplayRecommendations(country, ageGroup, ageData);
+            
+            // Show results
+            const resultsSection = document.getElementById('resultsSection');
+            resultsSection.classList.add('active');
+            resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        function updateChart(ageData) {
+            const ctx = document.getElementById('nicheChart').getContext('2d');
+            
+            const colors = [
+                'rgba(33, 128, 141, 1)',      // Teal
+                'rgba(50, 184, 198, 1)',      // Light Teal
+                'rgba(255, 84, 89, 1)',       // Red
+                'rgba(230, 129, 97, 1)',      // Orange
+                'rgba(102, 126, 234, 1)',     // Purple
+                'rgba(245, 93, 178, 1)',      // Pink
+                'rgba(76, 175, 80, 1)',       // Green
+                'rgba(255, 193, 7, 1)'        // Yellow
+            ];
+            
+            if (chartInstance) {
+                chartInstance.destroy();
+            }
+            
+            chartInstance = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ageData.niches.map(n => n.name),
+                    datasets: [{
+                        data: ageData.niches.map(n => n.percentage),
+                        backgroundColor: colors.slice(0, ageData.niches.length),
+                        borderColor: 'white',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                font: { size: 12, family: "inherit" },
+                                padding: 15,
+                                color: 'rgba(25, 52, 59, 0.7)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // AI Recommendation Engine
+        class RecommendationEngine {
+            generateRecommendations(country, ageGroup, niches) {
+                const recommendations = {
+                    contentFocus: this.getContentFocus(niches),
+                    contentIdeas: this.getContentIdeas(country, ageGroup, niches),
+                    postingStrategy: this.getPostingStrategy(ageGroup, country),
+                    growthHacks: this.getGrowthHacks(country, ageGroup, niches)
+                };
+                
+                return recommendations;
+            }
+            
+            getContentFocus(niches) {
+                const focus = [];
+                niches.slice(0, 3).forEach((niche, index) => {
+                    const priority = index === 0 ? "PRIMARY" : index === 1 ? "SECONDARY" : "TERTIARY";
+                    focus.push(`${niche.name} (${priority} - ${niche.percentage}%)`);
+                });
+                return focus;
+            }
+            
+            getContentIdeas(country, ageGroup, niches) {
+                const ideas = [];
+                
+                // Based on top niche
+                if (niches[0].name.includes("Entertainment") || niches[0].name.includes("Comedy")) {
+                    ideas.push("Create funny, relatable short skits");
+                    ideas.push("Comedy challenges with trending sounds");
+                }
+                
+                if (niches[0].name.includes("Dance")) {
+                    ideas.push("Learn trending choreography");
+                    ideas.push("Add your unique twist to popular dances");
+                }
+                
+                if (niches[0].name.includes("Education")) {
+                    ideas.push("Share actionable tips and tutorials");
+                    ideas.push("Create educational series");
+                }
+                
+                if (niches[0].name.includes("Lifestyle")) {
+                    ideas.push("Daily vlog style content");
+                    ideas.push("Show behind-the-scenes moments");
+                }
+                
+                // Country-specific
+                if (country === "India") {
+                    ideas.push("Use trending Bollywood songs");
+                    ideas.push("Participate in Hindi/regional trends");
+                }
+                
+                if (country === "Spain") {
+                    ideas.push("Feature Spanish/Latin music");
+                    ideas.push("Participate in local trends");
+                }
+                
+                if (country === "Turkey") {
+                    ideas.push("Use trending Turkish music");
+                    ideas.push("Engage with Turkish creator community");
+                }
+                
+                // Age-specific
+                if (ageGroup === "13-17") {
+                    ideas.push("Follow school/Gen Z trends");
+                    ideas.push("Participate in TikTok challenges");
+                }
+                
+                if (ageGroup === "35-44" || ageGroup === "45+") {
+                    ideas.push("Focus on quality over quantity");
+                    ideas.push("Share expertise and experience");
+                }
+                
+                return ideas.slice(0, 4);
+            }
+            
+            getPostingStrategy(ageGroup, country) {
+                const strategy = [];
+                
+                // Frequency by age
+                const frequency = {
+                    "13-17": "3-4 times per week",
+                    "18-24": "4-5 times per week",
+                    "25-34": "3-4 times per week",
+                    "35-44": "2-3 times per week",
+                    "45+": "2-3 times per week"
+                };
+                
+                strategy.push("Post " + frequency[ageGroup]);
+                
+                // Best times
+                const times = {
+                    "13-17": "After school (4-7 PM), Evening (8-10 PM)",
+                    "18-24": "Evening (7-10 PM), Late night (10 PM-1 AM)",
+                    "25-34": "Lunch break (12-1 PM), Evening (6-9 PM)",
+                    "35-44": "Morning (6-8 AM), Evening (5-7 PM)",
+                    "45+": "Morning (7-9 AM), Evening (5-6 PM)"
+                };
+                
+                strategy.push("Best times: " + times[ageGroup]);
+                
+                // Country-specific timing
+                if (country === "India") {
+                    strategy.push("Peak time: 7-10 PM IST");
+                }
+                
+                if (country === "Spain") {
+                    strategy.push("Peak time: 7-10 PM CET");
+                }
+                
+                if (country === "Turkey") {
+                    strategy.push("Peak time: 7-10 PM EET");
+                }
+                
+                return strategy;
+            }
+            
+            getGrowthHacks(country, ageGroup, niches) {
+                const hacks = [
+                    "Respond to EVERY comment for 24 hours",
+                    "Use trending sounds and hashtags",
+                    "Collaborate with other creators",
+                    "Post consistently on schedule"
+                ];
+                
+                if (niches[0].name.includes("Dance")) {
+                    hacks.push("Participate in dance challenges");
+                }
+                
+                if (country === "India") {
+                    hacks.push("Use trending Bollywood hashtags");
+                }
+                
+                if (ageGroup === "18-24") {
+                    hacks.push("Jump on trends quickly");
+                }
+                
+                if (ageGroup === "35-44" || ageGroup === "45+") {
+                    hacks.push("Build authority in your niche");
+                }
+                
+                return hacks.slice(0, 4);
+            }
+        }
+        
+        function generateAndDisplayRecommendations(country, ageGroup, ageData) {
+            const engine = new RecommendationEngine();
+            const recommendations = engine.generateRecommendations(country, ageGroup, ageData.niches);
+            
+            let html = '';
+            
+            // Content Focus
+            html += '<div class="rec-section">';
+            html += '<h4>📌 Content Focus</h4>';
+            html += '<ul>';
+            recommendations.contentFocus.forEach(item => {
+                html += `<li>${item}</li>`;
+            });
+            html += '</ul></div>';
+            
+            // Content Ideas
+            html += '<div class="rec-section">';
+            html += '<h4>💡 Content Ideas</h4>';
+            html += '<ul>';
+            recommendations.contentIdeas.forEach(item => {
+                html += `<li>${item}</li>`;
+            });
+            html += '</ul></div>';
+            
+            // Posting Strategy
+            html += '<div class="rec-section">';
+            html += '<h4>📅 Posting Strategy</h4>';
+            html += '<ul>';
+            recommendations.postingStrategy.forEach(item => {
+                html += `<li>${item}</li>`;
+            });
+            html += '</ul></div>';
+            
+            // Growth Hacks
+            html += '<div class="rec-section">';
+            html += '<h4>🚀 Growth Hacks</h4>';
+            html += '<ul>';
+            recommendations.growthHacks.forEach(item => {
+                html += `<li>${item}</li>`;
+            });
+            html += '</ul></div>';
+            
+            document.getElementById('recommendationContent').innerHTML = html;
+            document.getElementById('recommendationsBox').style.display = 'block';
+        }
+        
+        // Keyboard support
+        document.getElementById('ageGroup').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') analyzeData();
+        });
+        
+        document.getElementById('country').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') analyzeData();
+        });
+    </script>
+</body>
+</html>
